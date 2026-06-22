@@ -27,9 +27,11 @@ data, frontmatter.
 Then run grilling passes. Each pass is a round trip:
 
 1. **Descend** (top-down): scan paragraph → sentence → word. At the finest grain, surface
-   every candidate against two tests:
+   every candidate against three tests:
    - **Removal** — cut it: does meaning or quality meaningfully drop? If no, it goes.
    - **Substitution** — is there a word that carries the load more precisely? If yes, swap.
+   - **Redundancy** — does it restate a neighbor or negate its own opposite (`costs, not
+     free`)? Test at every grain (word, phrase, whole sentence), not just single words.
 
    Tag each unit `KEEP`, `CUT`, `MERGE`, or `SWAP`.
 
@@ -54,7 +56,8 @@ the fixed point.
 - **Meaning is invariant.** Brevity never beats accuracy. A change that alters meaning is
   rejected by definition.
 - **Preserve voice.** Tighten; don't flatten into generic prose. Cut filler; keep
-  intentional rhetoric, cadence, and emphasis.
+  intentional rhetoric, cadence, and emphasis. Protect emphasis only when it adds a new,
+  load-bearing specific; a redundant line dressed as rhetoric still goes.
 - **Concise ≠ terse.** Keep connective tissue that aids comprehension.
 - **Flag judgment calls.** When a cut might be deliberate emphasis or rhetoric, don't force
   it — surface it as a question (an intent fork) for the user.
